@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.select :user_id, User.all.map {|user| [user.name, user.id]}.to_h %>
   </div>
 
   <div class="actions">
